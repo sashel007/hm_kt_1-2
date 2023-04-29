@@ -1,15 +1,10 @@
 import java.util.*
 
-fun main(args: Array<String>) {
+@Suppress("NAME_SHADOWING")
+fun main() {
 
-    var amount: Double = 0.0
     val commissionInPercentage = 0.0075
     var commission = 0.0
-
-    val maxLimitPerDayForCard = 150_000.0
-    val maxLimitPerMonthForCard = 600_000.0
-    val maxLimitByTimeVK = 15_000.0
-    val maxLimitPerMonthVK = 40_000.0;
 
     println("Какой картой вы пользуетесь? Введите номер:")
     println("1. Maestro")
@@ -28,10 +23,10 @@ fun main(args: Array<String>) {
 
 
     println("Введите сумму: ")
-    var inputAmount = scanner.nextDouble()
+    val inputAmount = scanner.nextDouble()
     if (inputAmount <= 0.0) {
         print("Введите корректную сумму:")
-        var inputAmount = scanner.nextDouble()
+        scanner.nextDouble()
     }
 
     when (selectedCard) {
